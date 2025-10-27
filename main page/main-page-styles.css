@@ -7,23 +7,31 @@
 :root {
   --red: rgba(190, 48, 16, 0.771);
   --brown: rgb(76, 57, 52);
-  --yellow-light: rgb(224, 210, 185);
+  --yellow-light-2: rgb(224, 210, 185);
+  --yellow-light: rgba(224, 210, 185, 0.266);
+  --yellow-title: rgb(255, 242, 220);
 }
 
 button {
-  color: rgb(224, 210, 185);
+  color: var(--yellow-title);
   background-color: var(--red);
   font-size: 20px;
   border: none;
 
 }
 
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 html, body {
-  background-color: rgb(224, 210, 185);
+  background-color: var(--yellow-light);
   height: 100%;
   overflow: hidden;
   color:rgb(224, 210, 185);
-
+  width: 100%;
+  margin: 0;
 }
 
 #buttons-timer-container {
@@ -38,7 +46,7 @@ html, body {
   background-color: var(--red);
   border-radius: 20px;
   gap: 15px;
-  
+  margin: 10px;
 }
 
 #account-button, #streak-button, #leaderboard-button {
@@ -54,14 +62,15 @@ html, body {
   transform: translateX(-50%);
   margin: 0;
   font-size: 50px;
-  letter-spacing: -13px;
+  letter-spacing: -0px;
+  color: var(--yellow-title);
 }
 
 .tomato-icon-light {
-  width: 45px;
-  transform: translateY(5px) translateX(6px);
+  width: 40px;
+  transform: translateY(4px) translateX(-25px);
   color:rgb(224, 210, 185);
-  filter: brightness(0) saturate(100%) invert(60%) sepia(100%) hue-rotate(0deg);
+  filter: brightness(0) saturate(100%) invert(95%) sepia(100%) hue-rotate(0deg);
 }
 
 #menu-button {
@@ -111,7 +120,7 @@ html, body {
 #timer-time {
   width: 200px;
   height: 200px;
-  color: rgb(224, 210, 185);
+  color: rgb(255, 242, 220);
   display: flex;
   justify-content: center;
   align-items: center;
