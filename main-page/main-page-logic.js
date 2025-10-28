@@ -7,8 +7,8 @@ workButton = document.getElementById("work-button");
 shortBreakButton = document.getElementById("short-break-button");
 longBreakButton = document.getElementById("long-break-button");
 timerTime = document.getElementById("timer-time");
-startButton = document.getElementById("start-button");
-stopButton = document.getElementById("stop-button");
+startStopButton = document.getElementById("start-button");
+//stopButton = document.getElementById("stop-button");
 resetButton = document.getElementById("reset-button");
 
 const work_25_minutes = 1500;
@@ -28,11 +28,18 @@ const updateTime = () => {
   timerTime.innerHTML = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 }
 
-const startTimer = () => {
+const startStopTimer = () => {
   if (isRunning) {
+    clearInterval(interval);
+    isRunning = false;
+    updateTime();
+    startStopButton.innerHTML = "Start";
+    startStopButton.style.backgroundColor = "rgba(41, 195, 46, 1)"
     return;
   }
   isRunning = true;
+  startStopButton.innerHTML = "Stop";
+  startStopButton.style.backgroundColor = "rgb(219, 61, 39)";
   interval = setInterval(() => {
     if (timeLeft <= 0) {
       alert("Time's up!");
@@ -46,11 +53,11 @@ const startTimer = () => {
   }, 1000)
 }
 
-const stopTimer = () => {
-  clearInterval(interval);
-  isRunning = false;
-  updateTime();
-}
+// const stopTimer = () => {
+//   clearInterval(interval);
+//   isRunning = false;
+//   updateTime();
+// }
 
 const resetTimer = () => {
   clearInterval(interval);
@@ -68,8 +75,8 @@ const timeSwitch = (time) => {
   updateTime();
 }
 
-startButton.addEventListener("click", startTimer);
-stopButton.addEventListener("click", stopTimer);
+startStopButton.addEventListener("click", startStopTimer);
+//stopButton.addEventListener("click", stopTimer);
 resetButton.addEventListener("click", resetTimer);
 workButton.addEventListener("click", () => timeSwitch(work_25_minutes));
 shortBreakButton.addEventListener("click", () => timeSwitch(break_5_minutes));

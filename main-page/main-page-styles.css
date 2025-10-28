@@ -11,6 +11,8 @@
   --yellow-light: rgba(224, 210, 185, 0.266);
   --yellow-title: rgb(255, 242, 220);
   --tomato-red: rgb(219, 61, 39);
+  --tomato-red-dark: rgb(112, 32, 21);
+  --button-green: rgba(41, 195, 46, 1);
 }
 
 button {
@@ -23,7 +25,7 @@ button {
 
 button:hover {
   cursor: pointer;
-  opacity: 0.8;
+
 }
 
 html, body {
@@ -32,13 +34,13 @@ html, body {
   overflow: hidden;
   width: 100%;
   margin: 0;
+  user-select: none;
 }
 
 #navbar {
   display: flex;
   align-items: center;
   padding: 5px;
-  /*background-color: rgb(76, 57, 52);*/
   background-color: var(--tomato-red);
   border-radius: 20px;
   gap: 15px;
@@ -106,6 +108,24 @@ html, body {
   border-radius: 20px;
 }
 
+.main-button {
+
+  transition: all 0.1s ease-in-out;
+}
+
+.main-button:hover {
+  box-shadow: 0 6px var(--tomato-red-dark);
+}
+
+.main-button:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 var(--tomato-red-dark);
+}
+
+#start-button {
+  background-color: var(--button-green);
+}
+
 #stop-button {
   display: none;
 }
@@ -125,7 +145,6 @@ html, body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  /*background-color: rgb(76, 57, 52);*/
   padding: 5rem;
   font-size: 105px;
   border-radius: 50%;
@@ -136,6 +155,4 @@ html, body {
   letter-spacing: -8px;
   
 }
-
-/*SDDSDSSD*/
 
