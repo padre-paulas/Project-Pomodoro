@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A convenient tool to help you stay focused and productive on any task!">
+  <link rel="stylesheet" href="main-page-styles.css">
+  <link rel="icon" href="../media/tomato-white-1.png">
+  <title>Project Pomodoro</title>
+</head>
+<body>
+
+  <div id="navbar">
+    <a href="../user-account/user-account-frontend/user-account.html" class="navbar-button" id="account-button">
+      <img id="account-icon" src="../media/account-icon-white.png" alt="User Account">
+    </a>
+    <a href="../commitment/frontend/commitment.html" class="navbar-button" id="streak-button">
+      <img id="flame-icon" src="../media/flame-icon-white.png" alt="Commitment Tracker">
+    </a>
+    <a href="../focus-leaders/frontend/focus-leaders.html" class="navbar-button" id="leaderboard-button">
+      <img id="leaderboard-icon" src="../media/leaderboard-icon-white.png" alt="Focus Leaders">
+    </a>
+    <h1 id="pomodoro-title">
+      POMODOR
+      <img class="tomato-icon-light" src="../media/tomato-light-2.png" alt="O">
+    </h1>
+    <button id="menu-button">&#9776</button>
+  </div>
+
+  <div id="buttons-timer-container">
+    <div id="break-buttons">
+      <button class="main-button" id="work-button">Work</button>
+      <button class="main-button" id="short-break-button">Short Break</button>
+      <button class="main-button" id="long-break-button">Long Break</button>
+    </div>
+
+    <div id="timer">
+      <h1 id="timer-time">25:00</h1>
+    </div>
+
+    <div id="start-stop-buttons">
+      <button class="main-button" id="start-button">Start</button>
+      <button class="main-button" id="stop-button">Stop</button>
+      <button class="main-button" id="reset-button">Reset</button>
+    </div>
+  </div>
+  
+  
+  <script src="main-page-logic.js"></script>
+</body>
+</html>
