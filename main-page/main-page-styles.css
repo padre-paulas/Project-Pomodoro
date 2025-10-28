@@ -10,11 +10,12 @@
   --yellow-light-2: rgb(224, 210, 185);
   --yellow-light: rgba(224, 210, 185, 0.266);
   --yellow-title: rgb(255, 242, 220);
+  --tomato-red: rgb(219, 61, 39);
 }
 
 button {
   color: var(--yellow-title);
-  background-color: var(--red);
+  background-color: var(--tomato-red);
   font-size: 20px;
   border: none;
 
@@ -33,16 +34,12 @@ html, body {
   margin: 0;
 }
 
-#buttons-timer-container {
-
-}
-
 #navbar {
   display: flex;
   align-items: center;
   padding: 5px;
   /*background-color: rgb(76, 57, 52);*/
-  background-color: var(--red);
+  background-color: var(--tomato-red);
   border-radius: 20px;
   gap: 15px;
   margin: 10px;
@@ -107,6 +104,10 @@ html, body {
   padding: 10px;
   width: 160px;
   border-radius: 20px;
+}
+
+#stop-button {
+  display: none;
 }
 
 #timer {
