@@ -68,9 +68,6 @@ const timeSwitch = (time) => {
   updateTime();
 }
 
-
-
-
 startButton.addEventListener("click", startTimer);
 stopButton.addEventListener("click", stopTimer);
 resetButton.addEventListener("click", resetTimer);
