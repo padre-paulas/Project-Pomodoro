@@ -8,21 +8,35 @@
 </head>
 <body>
 
-  <div class="navbar">
-
+  <div id="navbar">
+    <button id="account-button">👨🏻‍💻</button>
+    <button id="streak-button">🔥</button>
+    <button id="leaderboard-button">👑</button>
+    <h1 id="pomodoro-title">
+      POMODOR
+      <img class="tomato-icon-light" src="../media/tomato-light-2.png" alt="O">
+    </h1>
+    <button id="menu-button">&#9776</button>
   </div>
 
-  <div class="break-buttons">
+  <div id="buttons-timer-container">
+    <div id="break-buttons">
+      <button id="work-button">Work</button>
+      <button id="short-break-button">Short Break</button>
+      <button id="long-break-button">Long Break</button>
+    </div>
 
+    <div id="timer">
+      <h1 id="timer-time">25:00</h1>
+    </div>
+
+    <div id="start-stop-buttons">
+      <button id="start-button">Start</button>
+      <button id="stop-button">Stop</button>
+      <button id="reset-button">Reset</button>
+    </div>
   </div>
-
-  <div class="timer">
-    <p id="timer-time">00:00</p>
-  </div>
-
-  <div class="start-stop-buttons">
-
-  </div>
+  
   
   <script src="main-page-logic.js"></script>
 </body>
