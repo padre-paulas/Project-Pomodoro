@@ -29,7 +29,6 @@ html, body {
   background-color: var(--yellow-light);
   height: 100%;
   overflow: hidden;
-  color:rgb(224, 210, 185);
   width: 100%;
   margin: 0;
 }
