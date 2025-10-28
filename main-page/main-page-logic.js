@@ -28,18 +28,33 @@ const updateTime = () => {
   timerTime.innerHTML = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 }
 
+const stateSwitch = () => {
+  if (isRunning) {
+    startStopButton.innerHTML = "Stop";
+    startStopButton.style.backgroundColor = "rgb(219, 61, 39)";
+    
+    workButton.classList.remove("main-button");
+    shortBreakButton.classList.remove("main-button");
+    longBreakButton.classList.remove("main-button"); 
+  } else {
+    startStopButton.innerHTML = "Start";
+    startStopButton.style.backgroundColor = "rgba(41, 195, 46, 1)";
+    workButton.classList.add("main-button");
+    shortBreakButton.classList.add("main-button");
+    longBreakButton.classList.add("main-button"); 
+  } 
+}
+
 const startStopTimer = () => {
   if (isRunning) {
     clearInterval(interval);
     isRunning = false;
     updateTime();
-    startStopButton.innerHTML = "Start";
-    startStopButton.style.backgroundColor = "rgba(41, 195, 46, 1)"
+    stateSwitch();
     return;
   }
   isRunning = true;
-  startStopButton.innerHTML = "Stop";
-  startStopButton.style.backgroundColor = "rgb(219, 61, 39)";
+  stateSwitch();
   interval = setInterval(() => {
     if (timeLeft <= 0) {
       alert("Time's up!");
@@ -64,6 +79,7 @@ const resetTimer = () => {
   isRunning = false;
   timeLeft = timeDuration;
   updateTime();
+  stateSwitch();
 }
 
 const timeSwitch = (time) => {
